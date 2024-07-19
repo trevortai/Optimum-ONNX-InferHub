@@ -11,11 +11,10 @@ def main():
     # Perform the conversion based on the direction
     if args.direction == "fp16_to_fp32":
         # Convert the model from FP16 to FP32
-        model_converted = float16.convert_float_to_float16(model, keep_io_types=True)
-        output_path = args.model.replace(".onnx", "_fp32.onnx")
+        print("This function is a WIP")
     elif args.direction == "fp32_to_fp16":
         # Convert the model from FP32 to FP16
-        model_converted = float16.convert_float_to_float16(model)
+        model_converted = float16.convert_float_to_float16(model, keep_io_types=True)
         output_path = args.model.replace(".onnx", "_fp16.onnx")
 
     # Save the converted model

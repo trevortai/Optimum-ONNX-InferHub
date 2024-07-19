@@ -1,7 +1,7 @@
 from optimum.onnxruntime import ORTModelForSpeechSeq2Seq
 from transformers import AutoProcessor, pipeline
 import onnxruntime as ort
-from init_args import parse_args_whisper
+from init_args import parse_args_whisperpyth
 import time
 
 def main():
