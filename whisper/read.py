@@ -1,7 +1,10 @@
 from optimum.onnxruntime import ORTModelForSpeechSeq2Seq
 from transformers import AutoProcessor, pipeline
 import onnxruntime as ort
-from init_args import parse_args_whisperpyth
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+from init_args import parse_args_whisper
 import time
 
 def main():
