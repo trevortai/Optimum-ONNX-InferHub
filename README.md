@@ -1,6 +1,8 @@
 # Optimum-InferHub
 Using Optimum to run inference on a variety of execution providers for ONNX models
 
+Status: only working with DML right now on windows
+
 To start, you will need an onnx model.
 
 It is also recommended to work in conda environments, either install miniconda or anaconda to your system.
