@@ -17,4 +17,5 @@ def parse_args_classification():
     parser = argparse.ArgumentParser(description="Run a text classification model.")
     parser.add_argument("--text", type=str, required=True, help="Text to classify")
     parser.add_argument("--model", type=str, required=True, help="Name of the model to use")
+    parser.add_argument("--timer", action="store_true", help="Measure the time taken for inference")
     return parser.parse_args()
