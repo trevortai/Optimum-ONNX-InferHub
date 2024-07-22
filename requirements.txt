@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 optimum
 onnx
 onnxruntime-directml
 onnxconverter-common
 msvc-runtime
-=======
 optimum
 onnx
 onnxruntime-directml
 onnxconverter-common
 msvc-runtime
->>>>>>> 57fc93982986f2d705e8d629d15fd45c3a3726ae
