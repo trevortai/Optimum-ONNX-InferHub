@@ -17,7 +17,7 @@ def main():
 
     # Load the processor and model using the provided model name
     processor = AutoProcessor.from_pretrained(args.model)
-    model = ORTModelForSpeechSeq2Seq.from_pretrained(args.model, provider="DmlExecutionProvider", use_cache=False)
+    model = ORTModelForSpeechSeq2Seq.from_pretrained(args.model, provider=EPselect(args,available_providers), use_cache=False)
     whisper = pipeline(task="automatic-speech-recognition", model=model, tokenizer=processor.tokenizer, feature_extractor=processor.feature_extractor)
 
     # Measure the time taken for inference if the timer argument is provided
@@ -31,7 +31,7 @@ def main():
         end_time = time.time()
         print(f"Inference completed in {end_time - start_time:.2f} seconds")
 
-    print(read)
+    print(read) 
 
 if __name__ == "__main__":
     main()
