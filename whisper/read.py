@@ -4,7 +4,7 @@ import onnxruntime as ort
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parent.parent))
-from init_args import parse_args_whisper
+from init import parse_args_whisper, EPselect
 import time
 
 def main():

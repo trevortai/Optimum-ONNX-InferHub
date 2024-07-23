@@ -4,7 +4,7 @@ import onnxruntime as ort
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parent.parent))
-from init_args import parse_args_classification
+from init import parse_args_classification, EPselect
 import time
 
 
@@ -16,8 +16,9 @@ def main():
     available_providers = ort.get_available_providers()
     print("Available execution providers:", available_providers)
 
+
     tokenizer = AutoTokenizer.from_pretrained(args.model)
-    model = ORTModelForSequenceClassification.from_pretrained(args.model, provider="DmlExecutionProvider", use_cache=False)
+    model = ORTModelForSequenceClassification.from_pretrained(args.model, provider=EPselect(args, available_providers), use_cache=False)
     classifier = pipeline("text-classification", model=model, tokenizer=tokenizer)
 
     # Measure the time taken for inference if the timer argument is provided
