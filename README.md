@@ -33,4 +33,4 @@ For Whisper Example:
   
   ```pip install -r requirements.txt```
   
-  ```python read.py with --model localmodel --audio audiofile --timer```
+  ```python read.py with --model localmodel --audio audiofile --ep dml --timer```
