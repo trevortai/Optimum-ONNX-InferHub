@@ -1,7 +1,7 @@
 # Optimum-InferHub
 Using Optimum to run inference on a variety of execution providers for ONNX models
 
-Status: only working with DML right now on windows
+**Status:** only working with DML and CPU right now on windows, will try to include CUDA, and ROCm + Linux in the future
 
 To start, you will need an onnx model.
 
@@ -13,7 +13,9 @@ Start the anaconda terminal and run the following to create an environment:
 
 ```conda activate ort```
 
-Convert models to onnx with optimum: https://huggingface.co/docs/optimum/main/en/exporters/onnx/usage_guides/export_a_model
+Convert models to onnx optimum: https://huggingface.co/docs/optimum/main/en/exporters/onnx/usage_guides/export_a_model
+
+Models that should work out of the box: https://huggingface.co/models?sort=trending&search=Optimum%2F
 
 Basic sample:
 
