@@ -34,3 +34,10 @@ For Whisper Example:
   ```pip install -r requirements.txt```
   
   ```python read.py with --model localmodel --audio audiofile --ep dml --timer```
+
+  dtconv-ort can be used to convert ONNX Optimum models form FP32 to FP16
+
+  Example:
+  ```python dtconv-ort --model localmodel --direction fp32_to_fp16```
+  The resulting .onnx model will be placed in the same folder as the localmodel
+  Generally, all other files can work with both fp16 and the original fp32, but only 1 can be in the folder to work correctly
