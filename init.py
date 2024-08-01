@@ -36,6 +36,9 @@ def EPselect(args, available_providers):
     elif args.ep.lower() == "cpu" and "CPUExecutionProvider" in available_providers:
         print("Using CPUExecutionProvider for execution.")
         return "CPUExecutionProvider"
+    elif args.ep.lower() == "cuda" and "CUDAExecutionProvider" in available_providers:
+        print("Using CUDAExecutionProvider for execution.")
+        return "CUDAExecutionProvider"
     else:
         print(f"Error: The selected execution provider '{args.ep}' is not available.")
         sys.exit(1)
