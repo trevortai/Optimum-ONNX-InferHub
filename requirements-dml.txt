@@ -3,7 +3,4 @@ onnx
 onnxruntime-directml
 onnxconverter-common
 msvc-runtime
-optimum
-onnx
-onnxruntime-directml
-onnxconverter-common
+
