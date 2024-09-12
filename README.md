@@ -17,7 +17,7 @@ Convert models to onnx optimum: https://huggingface.co/docs/optimum/main/en/expo
 
 Models that should work out of the box: https://huggingface.co/models?sort=trending&search=Optimum%2F
 
-Basic sample:
+Basic sample to convert models:
 
 ```pip install optimum```
 
@@ -33,7 +33,7 @@ For Whisper Example:
   
   ```pip install -r requirements.txt```
   
-  ```python read.py with --model localmodel --audio audiofile --ep dml --timer```
+  ```python read.py --model localmodel --audio audiofile --ep dml --timer```
 
   dtconv-ort can be used to convert ONNX Optimum models form FP32 to FP16
 
