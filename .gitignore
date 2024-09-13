@@ -1,0 +1,4 @@
+# Ignore sub models folders, but not the models folder itself
+models/*
+!models/
+models/*/
