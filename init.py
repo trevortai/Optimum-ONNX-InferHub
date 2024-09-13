@@ -24,10 +24,6 @@ def parse_args_classification():
     return parser.parse_args()
 
 def EPselect(args, available_providers):
-    # Validate the execution provider argument
-    if args.ep and args.ep.lower() not in ["dml", "cpu"]:
-        print("Error: execution provider must be either 'dml' or 'cpu'.")
-        sys.exit(1)
 
     # Check if the selected execution provider is available
     if args.ep.lower() == "dml" and "DmlExecutionProvider" in available_providers:
@@ -36,6 +32,9 @@ def EPselect(args, available_providers):
     elif args.ep.lower() == "cpu" and "CPUExecutionProvider" in available_providers:
         print("Using CPUExecutionProvider for execution.")
         return "CPUExecutionProvider"
+    elif args.ep.lower() == "cuda" and "CUDAExecutionProvider" in available_providers:
+        print("Using CUDAExecutionProvider for execution.")
+        return "CUDAExecutionProvider"
     else:
         print(f"Error: The selected execution provider '{args.ep}' is not available.")
         sys.exit(1)
