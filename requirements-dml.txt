@@ -3,4 +3,5 @@ onnx
 onnxruntime-directml
 onnxconverter-common
 msvc-runtime
-
+pillow
+datasets
