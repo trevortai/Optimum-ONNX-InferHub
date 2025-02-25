@@ -31,7 +31,7 @@ For Whisper Example:
 
   ```conda install ffmpeg```
   
-  ```pip install -r requirements.txt```
+  ```pip install -r requirements-dml.txt```
   
   ```python read.py --model localmodel --audio audiofile --ep dml --timer```
 
